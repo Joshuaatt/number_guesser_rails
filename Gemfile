@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -24,4 +23,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
