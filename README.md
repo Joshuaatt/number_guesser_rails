@@ -8,17 +8,20 @@ Clone the repository.
 ```$ git clone https://github.com/Joshuaatt/number_guesser_rails.git```
 
 In the parent directory run:
+
 ```$ bundle```
 ```$ rake db:create```
 ```$ rake db:migrate```
 
-Starts the Rails server.
+Starts the Rails server:
+
 ```$ rails s```
 
-Navigate to localhost in your browser.
-```localhost:3000```
+Navigate to localhost in your browser:
 
-# Testing
+localhost:3000
+
+## Testing
 
 For testing run:
 ```$ rspec```
