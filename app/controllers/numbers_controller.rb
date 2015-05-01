@@ -4,12 +4,6 @@ class NumbersController < ApplicationController
   end
 
   def create
-    @number = Number.new(number_params)
-    @first_number = Number.find(params[:id]).first_number
-    if @number.save
-      flash[:notice] = "#{@first_number}"
-      redirect_to :root
-    end
   end
 
   def update
