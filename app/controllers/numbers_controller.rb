@@ -12,13 +12,14 @@ class NumbersController < ApplicationController
       @first_number = @number.first_number
       @second_number = @number.second_number
       @guess = @number.guess
-      @random_number = rand(@first_number..@second_number)
-      if @first_number > @second_number
+      if @first_number.blank? || @second_number.blank? || @guess.blank?
+        flash[:notice] = "Please enter numbers in every field."
+      elsif @first_number > @second_number
         flash[:notice] = "First number must be less than second number"
-      elsif @guess == @random_number
+      elsif @guess == (@random_number = rand(@first_number..@second_number))
         flash[:notice] = "You guessed correctly!"
       else
-        flash[:notice] = "My number was #{@random_number}. Yours was #{@guess}. Please try again."
+        flash[:notice] = "My number is #{@random_number}. Yours is #{@guess}. Please try again."
       end
       redirect_to :root
     end
