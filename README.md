@@ -1,8 +1,8 @@
-## Number Guesser
+# Number Guesser
 
 This is a number guessing game where the user inputs a range of numbers and guesses what number the computer will guess within that range.
 
-# Installation
+## Installation
 
 Clone the repository.
 ```$ git clone https://github.com/Joshuaatt/number_guesser_rails.git```
