@@ -15,7 +15,7 @@ class NumbersController < ApplicationController
       if @first_number.blank? || @second_number.blank? || @guess.blank?
         flash[:notice] = "Please enter numbers in every field."
       elsif @first_number > @second_number
-        flash[:notice] = "First number must be less than second number"
+        flash[:notice] = "First number must be less than second number."
       elsif @guess == (@random_number = rand(@first_number..@second_number))
         flash[:notice] = "You guessed correctly!"
       else
