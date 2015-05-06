@@ -1,18 +1,18 @@
 class Number < ActiveRecord::Base
 
   def is_valid?
-    if self.first_number && self.second_number && self.guess
-      return true
+    if first_number && second_number && guess
+      true
     else
       false
     end
   end
 
   def range
-    if self.first_number > self.second_number
-      range = self.second_number..self.first_number
+    if first_number > second_number
+      range = second_number..first_number
     else
-      range = self.first_number..self.second_number
+      range = first_number..second_number
     end
   end
 
@@ -21,7 +21,7 @@ class Number < ActiveRecord::Base
   end
 
   def winner?
-    if self.guess == random_number
+    if guess == random_number
       true
     end
   end
