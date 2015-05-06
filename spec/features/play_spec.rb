@@ -30,14 +30,5 @@ describe "Playing number guesser" do
       click_button "Play"
       expect(page).to have_content "Please enter numbers in every field."
     end
-
-    it "will display notice of blank fields" do
-      visit "/"
-      fill_in "First number", with: "777"
-      fill_in "Second number", with: "5"
-      fill_in "Guess", with: "2"
-      click_button "Play"
-      expect(page).to have_content "First number must be less than second number"
-    end
   end
 end
